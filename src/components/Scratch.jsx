@@ -7,8 +7,8 @@ const MyScratchCard = ({ onComplete }) => {
   return (
     <div>
       <ScratchCard
-        width={300}
-        height={300}
+        width={257}
+        height={257}
         image={IMG}  
         finishPercent={90}
         onComplete={onComplete}

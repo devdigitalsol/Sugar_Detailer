@@ -14,10 +14,9 @@ export default function Video(){
   }, []);
 
    return(
-    <div classNameName="w-full h-screen flex items-center justify-center bg-black">
-      <video ref={videoRef} controls classNameName="w-full h-auto">
-        <source src="../assets/images/Video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+    <div className="w-full h-screen flex items-center justify-center bg-black">
+      <video ref={videoRef} controls autoplay className="w-full h-auto">
+        <source src="../assets/images/1.mp4" type="video/mp4" />
       </video>
     </div>
    )

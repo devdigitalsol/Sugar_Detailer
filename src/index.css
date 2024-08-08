@@ -252,10 +252,10 @@
 .screen-5-text-1
 {
     position: relative;
-    top: 14%;
+    top: 10%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .ani-wrap{ position:absolute;left:0; bottom:0;  height:351px; animation:reveal 1s 0s ease-in alternate; overflow:hidden;}
@@ -314,3 +314,21 @@
   .form {
 	padding: 20px;
   }
+
+  .round {
+    width: 100%!important;
+    position: absolute;
+    left: 0;
+    width: 100%
+}
+
+.ScratchCard__Container {
+    width: 257px;
+    height: 257px;
+    position: relative;
+    user-select: none;
+    left: 36%;
+}
+
+
+  

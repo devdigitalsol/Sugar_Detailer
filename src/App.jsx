@@ -7,6 +7,11 @@ import Second from './components/Second'
 import Third from './components/Third'
 import Fourth from './components/Fourth'
 import Fifth from './components/Fifth'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+
+
 
 function App() {
 

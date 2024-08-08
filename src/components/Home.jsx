@@ -13,7 +13,7 @@ export default function Home() {
   };
 
   return (
-    <div classNameName="w-[100%] h-[100vh]">
+    <div className="w-[100%] h-[100vh]">
       <div
         style={{
           position: "absolute",
@@ -23,7 +23,7 @@ export default function Home() {
         }}
       >
         <MyScratchCard onComplete={onCompleteScratch} />
-        <h2 classNameName="text-center">
+        <h2 className="text-center">
           Please slide index fingers on the above circle Life Acidity Free Life
           Acidity Free Life Acidity{" "}
         </h2>
