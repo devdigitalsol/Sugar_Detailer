@@ -38,16 +38,7 @@ export default function Fifth({ isActive }) {
             <div className="w-[100%] h-[100vh]">
               <div className="round">
                 <MyScratchCard onComplete={onCompleteScratch} />
-                <h2
-                  className="text-center round-text"
-                  style={{
-                    textAlign: "center",
-                    paddingTop: "25px",
-                    fontSize: "18px",
-                  }}
-                >
-                  Please slide index fingers on the above circle.
-                </h2>
+                
               </div>
             </div>
           </div>
