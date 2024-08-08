@@ -13,7 +13,7 @@ export default function Fifth({ isActive }) {
   const onCompleteScratch = () => {
     setTimeout(() => {
       setShowVideo(true);
-    }, 2000); 
+    }, 1000); 
   };
 
   useEffect(() => {
