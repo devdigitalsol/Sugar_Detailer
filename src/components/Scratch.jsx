@@ -12,7 +12,7 @@ const MyScratchCard = ({ onComplete }) => {
         width={257}
         height={257}
         image={IMGMask} 
-        finishPercent={90}
+        finishPercent={70}
         onComplete={onComplete}
       >
         <img

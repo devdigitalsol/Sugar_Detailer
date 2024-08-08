@@ -10,52 +10,40 @@ import Fourth from './components/Fourth'
 import Fifth from './components/Fifth'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 
-
 function App() {
   const [slideIndex, setSlideIndex] = useState(0);
-  useEffect(() => {
-    
-  }, [slideIndex, setSlideIndex]);
+ 
 
   return (
-    // <Routes>
-    //           <Route path="/" element={<First />}/>
-    //           <Route path="/second" element={<Second />}/>
-    //           <Route path="/third" element={<Third />}/>
-    //           <Route path="/fourth" element={<Fourth />}/>
-    //           <Route path="/fifth" element={<Fifth/>}/> 
-    //           <Route path="/home" element={<Home />}/>
-    //           <Route path="/video" element={<Video />}/> 
-    // </Routes>
-    <Swiper modules={[EffectFade]} effect="fade"
-    slidesPerView={1}
-    onSlideChange={(event) => setSlideIndex(event.activeIndex)}
-  >
+    <Swiper
+       modules={[EffectFade]} 
+       effect="fade"
+       slidesPerView={1}
+       onSlideChange={(event) => setSlideIndex(event.activeIndex)}
+    >
     <SwiperSlide>
-    {<First/>}
-      </SwiperSlide>
+        <First isActive={slideIndex === 0} />
+    </SwiperSlide>
 
     <SwiperSlide>
-      {<Second/>}
-      </SwiperSlide>
+        <Second isActive={slideIndex === 1} />
+    </SwiperSlide>
 
     <SwiperSlide>
-      {<Third/>}
-      </SwiperSlide>
+        <Third isActive={slideIndex === 2} />
+    </SwiperSlide>
 
     <SwiperSlide>
-      {<Fourth/>}
-      </SwiperSlide>
+        <Fourth isActive={slideIndex === 3} />
+    </SwiperSlide>
 
     <SwiperSlide>
-      {<Fifth/>}
-      </SwiperSlide>
-    ...
+        <Fifth isActive={slideIndex === 4} />
+    </SwiperSlide>
   </Swiper>
   )
 }
