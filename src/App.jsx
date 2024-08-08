@@ -13,7 +13,7 @@ import { EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { useSwipeable } from 'react-swipeable';
-import BACKGROUND_AUDIO from "./assets/images/Video.mp4"
+import BACKGROUND_AUDIO from "./assets/images/song.mp3"
 
 
 function App() {
@@ -37,6 +37,12 @@ function App() {
       }
     },
   });
+
+  const pauseAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  };
    
  
   return (
@@ -49,7 +55,14 @@ function App() {
        modules={[EffectFade]} 
        effect="fade"
        slidesPerView={1}
-       onSlideChange={(event) => setSlideIndex(event.activeIndex)}
+       onSlideChange={(event) => 
+       {
+        setSlideIndex(event.activeIndex);
+          if (event.activeIndex === 4) {
+            pauseAudio();
+          }
+       }
+        }
     >
     <SwiperSlide>
         <First isActive={slideIndex === 0} />

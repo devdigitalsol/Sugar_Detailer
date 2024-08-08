@@ -46,7 +46,7 @@ export default function Fifth({ isActive }) {
                     fontSize: "18px",
                   }}
                 >
-                  Please slide index fingers on the above circle. Life Acidity Free Life Acidity Free Life Acidity
+                  Please slide index fingers on the above circle.
                 </h2>
               </div>
             </div>
