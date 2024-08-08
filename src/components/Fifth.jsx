@@ -7,24 +7,18 @@ import video from '../assets/images/video.mp4';
 
 export default function Fifth({ isActive }) {
   const navigate = useNavigate();
-  const [scratchCompleted, setScratchCompleted] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const textRef = useRef(null);
-  const scratchCardRef = useRef(null);
-  const videoRef = useRef(null);
 
   const onCompleteScratch = () => {
-    setScratchCompleted(true);
     setTimeout(() => {
-      navigate("/video");
-    }, 1500);
+      setShowVideo(true);
+    }, 2000); 
   };
 
   useEffect(() => {
     if (isActive) {
       textRef.current.classList.add('animated', 'zoomIn', 'd-6');
-      if (scratchCardRef.current) {
-        scratchCardRef.current.initScratchCard();
-      }
     } else {
       textRef.current.classList.remove('animated', 'zoomIn', 'd-6');
     }
@@ -33,7 +27,7 @@ export default function Fifth({ isActive }) {
   return (
     <div className="screen screen-5">
       <div className="box">
-        {!scratchCompleted ? (
+        {!showVideo ? (
           <div className="screen-5-text-1" id="js--sc--container">
             <img
               ref={textRef}
@@ -43,7 +37,7 @@ export default function Fifth({ isActive }) {
             />
             <div className="w-[100%] h-[100vh]">
               <div className="round">
-                <MyScratchCard ref={scratchCardRef} onComplete={onCompleteScratch} />
+                <MyScratchCard onComplete={onCompleteScratch} />
                 <h2
                   className="text-center round-text"
                   style={{
@@ -60,7 +54,6 @@ export default function Fifth({ isActive }) {
         ) : (
           <div className="video-container">
             <ReactPlayer
-              ref={videoRef}
               controls={true}
               playing={true}
               muted={true}

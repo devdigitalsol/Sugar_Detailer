@@ -16,6 +16,7 @@
     "react-router-dom": "^6.26.0",
     "react-scratchcard": "^1.1.2",
     "react-scratchcard-v2": "^1.1.1",
+    "react-swipeable": "^7.0.1",
     "swiper": "^11.1.9"
   },
   "devDependencies": {
