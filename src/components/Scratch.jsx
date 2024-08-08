@@ -1,11 +1,13 @@
 import React from "react";
 import ScratchCard from "react-scratchcard-v2";
-import IMGMask from "../assets/images/TrioCircle.png"; 
-import IMG from "../assets/images/unmask.png"; 
+import IMGMask from "../assets/images/unmask.png"; 
+import IMG from "../assets/images/TrioCircle.png"; 
+
+
 
 const MyScratchCard = ({ onComplete }) => {
   return (
-    <div style={{ position: "relative", width: "257px", height: "257px" }}>
+    <div>
       <ScratchCard
         width={257}
         height={257}

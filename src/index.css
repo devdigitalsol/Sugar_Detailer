@@ -330,5 +330,9 @@
     left: 36%;
 }
 
+.swiper-slide-visible, .swiper-slide-fully-visible, .swiper-slide-active {
+	border: 0;
+	outline: none;
+}
 
   
